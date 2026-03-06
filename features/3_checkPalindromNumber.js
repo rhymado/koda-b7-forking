@@ -1,4 +1,4 @@
-function isPalindrome(x) {
+export const isPalindrome = (x) => {
   const num = x;
 
   if (x < 0) return false;
@@ -12,4 +12,4 @@ function isPalindrome(x) {
   }
 
   return num === ans;
-}
+};
