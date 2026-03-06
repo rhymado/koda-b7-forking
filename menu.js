@@ -1,7 +1,8 @@
 import { createInterface } from "node:readline/promises";
-
 import sayHelloWorld from "./features/1_greeting.js";
+import hitungDiskon from "./features/5_hitungDiskon.js";
 import isGenap from "./features/7_isGenap.js";
+
 
 async function menu() {
     let exit = false
@@ -14,6 +15,7 @@ async function menu() {
         console.log("Selamat Datang di Menu")
         console.log("Silahkan pilih dari dibawah ini:")
         console.log("1. Hello World")
+        console.log("5. Hitung Diskon");
         console.log("7. Cek Ganjil Genap")
         console.log("0. Exit")
 
@@ -28,6 +30,14 @@ async function menu() {
             switch (input) {
                 case "1":
                     sayHelloWorld()
+                    break;
+                case "5":
+                    const inputHarga = await rl.question("Masukkan harga awal: ");
+                    const inputDiskon = await rl.question("Masukkan Diskon: ");
+                    const hargaAkhir = Number(inputHarga);
+                    const diskonAngka = Number(inputDiskon);
+                    const hasilAkhir = hitungDiskon(hargaAkhir, diskonAngka);
+                    console.log("Jumlah Diskon:" + hasilAkhir);
                     break;
                 case "7":
                     const angka = await rl.question("Masukkan angka : ")
