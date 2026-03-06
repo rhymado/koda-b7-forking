@@ -9,10 +9,6 @@ async function menu() {
         input: process.stdin,
         output: process.stdout
     })
-    const rl7 = createInterface({
-        input: process.stdin,
-        output: process.stdout
-    })
     do {
         console.log("======================")
         console.log("Selamat Datang di Menu")
@@ -33,7 +29,6 @@ async function menu() {
                 case "1":
                     sayHelloWorld()
                     break;
-                
                 case "7":
                     const angka = await rl.question("Masukkan angka : ")
                     console.log(isGenap(angka))
