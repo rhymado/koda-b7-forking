@@ -18,5 +18,4 @@ const toLowerCase = function () {
 
   return res;
 };
-console.log(toLowerCase());
 export default toLowerCase;
