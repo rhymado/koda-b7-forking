@@ -1,4 +1,5 @@
 import { createInterface } from "node:readline/promises";
+
 import sayHelloWorld from "./features/1_greeting.js";
 import isGenap from "./features/7_isGenap.js";
 import hitungDiskon from "./features/5_hitungDiskon.js";
@@ -40,7 +41,7 @@ async function menu() {
             switch (input) {
                 case "1":
                     sayHelloWorld()
-                    break;
+                break;
                 case "4":
                     const jariJari = await rl.question("Masukkan jari jari : ")
                     const tinggi = await rl.question("Masukkan tinggi : ")
@@ -55,8 +56,9 @@ async function menu() {
                     console.log("Jumlah Diskon:" + hasilHarga);
                     break;
                 case "6":
-                    convertCtoK(30)
-                    break;
+                        const celcius = await rl.question("Masukkan suhu Celcius : ")
+                console.log(convertCtoK(celcius))                  
+                break;
                 case "7":
                     const angka = await rl.question("Masukkan angka : ")
                     console.log(isGenap(angka))
@@ -76,6 +78,6 @@ async function menu() {
             throw err
         }
     } while (!exit)
-}
+    }
 
 menu()
