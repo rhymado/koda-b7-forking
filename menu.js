@@ -17,6 +17,7 @@ async function menu() {
         console.log("1. Hello World")
         console.log("7. Cek Ganjil Genap")
         console.log("8. Simple Calculator");
+        console.log("9. to Lower Case")
         console.log("0. Exit")
 
         try {
