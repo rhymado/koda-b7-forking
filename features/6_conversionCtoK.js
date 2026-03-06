@@ -1,5 +1,5 @@
 function convertCtoK(celcius){
-    console.log(celcius + 273.15)
+     return parseFloat(celcius) + 273.15
 }
 
 export default convertCtoK
