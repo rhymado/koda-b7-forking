@@ -2,7 +2,6 @@ import { createInterface } from "node:readline/promises";
 
 import sayHelloWorld from "./features/1_greeting.js";
 import pyramidNumber from "./features/10_pyramidTriangle.js";
-import { stderr } from "node:process";
 
 async function menu() {
     let exit = false
