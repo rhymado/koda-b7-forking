@@ -14,6 +14,7 @@ async function menu() {
         console.log("Selamat Datang di Menu")
         console.log("Silahkan pilih dari dibawah ini:")
         console.log("1. Hello World")
+        console.log("9. To LowerCase")
         console.log("0. Exit")
 
         try {
