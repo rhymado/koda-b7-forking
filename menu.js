@@ -1,6 +1,6 @@
 import { createInterface } from "node:readline/promises";
-
 import sayHelloWorld from "./features/1_greeting.js";
+import checkAngka from "./features/5_cekAngka.js";
 
 async function menu() {
     let exit = false
@@ -13,6 +13,7 @@ async function menu() {
         console.log("Selamat Datang di Menu")
         console.log("Silahkan pilih dari dibawah ini:")
         console.log("1. Hello World")
+        console.log("5. Mengecek Angka")
         console.log("0. Exit")
 
         try {
@@ -26,6 +27,11 @@ async function menu() {
             switch (input) {
                 case "1":
                     sayHelloWorld()
+                    break;
+                case "5":
+                   const askQuestion = await rl.question("Masukkan angka yang ingin dicek: ");
+                   const angkaValid = Number(askQuestion);
+                   console.log(checkAngka(angkaValid));
                     break;
 
                 default:
