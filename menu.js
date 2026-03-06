@@ -6,7 +6,7 @@ import { main } from "./features/8_calculator.js";
 import isGenap from "./features/7_isGenap.js";
 import convertCtoK from "./features/6_conversionCtoK.js";
 import toLowerCase from "./features/9_toLowerCase.js";
-import calculation from "./features/11_calculation.js";
+import { pyramidNumber } from "./features/10_pyramidNumber.js";
 
 
 
@@ -26,7 +26,7 @@ async function menu() {
         console.log("7. Cek Ganjil Genap")
         console.log("8. Simple Calculator");
         console.log("9. To Lower Case");
-        console.log("11. Menghitung Panjang")
+        console.log("10. TPyramid Number");
         console.log("0. Exit")
 
         try {
@@ -61,8 +61,8 @@ async function menu() {
                     const word = await rl.question("Masukkan huruf : ")
                     toLowerCase(word)
                     break;
-                case "11":
-                    await calculation(rl)
+                case "10":
+                    await pyramidNumber(rl)
                     break;
                 default:
                     console.log("pilihan anda masih dalam tahap perkembangan\n")
