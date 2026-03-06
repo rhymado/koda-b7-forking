@@ -1,6 +1,8 @@
 import { createInterface } from "node:readline/promises";
 
 import sayHelloWorld from "./features/1_greeting.js";
+import pyramidNumber from "./features/10_pyramidTriangle.js";
+import { stderr } from "node:process";
 
 async function menu() {
     let exit = false
@@ -13,6 +15,7 @@ async function menu() {
         console.log("Selamat Datang di Menu")
         console.log("Silahkan pilih dari dibawah ini:")
         console.log("1. Hello World")
+        console.log("10. Pyramid Number")
         console.log("0. Exit")
 
         try {
@@ -27,7 +30,17 @@ async function menu() {
                 case "1":
                     sayHelloWorld()
                     break;
+                case "10":
+                    const tinggiInput = await rl.question("Masukkan tinggi piramida: ")
+                    const tinggi = parseInt(tinggiInput)
 
+                    if(!isNaN(tinggi) & tinggi > 0) {
+                        console.log(`===Hasil Piramida===`)
+                        pyramidNumber(tinggi)
+                    } else {
+                        console.log("Masukkan anggka yang valid")
+                    }
+                    break;               
                 default:
                     console.log("pilihan anda masih dalam tahap perkembangan\n")
                     break;
