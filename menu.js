@@ -4,6 +4,7 @@ import sayHelloWorld from "./features/1_greeting.js";
 import isGenap from "./features/7_isGenap.js";
 import hitungDiskon from "./features/5_hitungDiskon.js";
 import luasSilinder from "./features/4_luasSilinder.js";
+import isGenap from "./features/7_isGenap.js";
 import { main } from "./features/8_calculator.js";
 import convertCtoK from "./features/6_conversionCtoK.js";
 import toLowerCase from "./features/9_toLowerCase.js";
